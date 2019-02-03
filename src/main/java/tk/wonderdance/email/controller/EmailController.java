@@ -1,6 +1,5 @@
 package tk.wonderdance.email.controller;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -20,11 +19,11 @@ public class EmailController {
 
     @Autowired
     EmailManager emailManager;
-
-    @RequestMapping(value = "test", method = RequestMethod.GET)
-    public ResponseEntity<?> test(){
-        return ResponseEntity.ok("OK");
-    }
+//
+//    @RequestMapping(value = "test", method = RequestMethod.GET)
+//    public ResponseEntity<?> test(){
+//        return ResponseEntity.ok("OK");
+//    }
 
     @RequestMapping(value = "send", method = RequestMethod.POST)
     public ResponseEntity<?> send(@Valid @RequestBody SendEmailRequest sendEmailRequest) {
