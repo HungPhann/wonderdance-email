@@ -1,11 +1,7 @@
 package tk.wonderdance.email.payload;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
-
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 
 public class SendEmailRequest {
     @NotNull
@@ -14,6 +10,7 @@ public class SendEmailRequest {
     private String toAddress;
 
     @NotNull
+    @Size(max = 256)
     private String subject;
 
     @NotNull
